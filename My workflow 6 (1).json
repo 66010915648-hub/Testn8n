@@ -1,0 +1,392 @@
+{
+  "name": "My workflow 6",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "9d2aa9a4-342d-456f-9f8e-fe8b1605254c",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "filter": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        224,
+        0
+      ],
+      "id": "112b1b1f-449f-4d6b-b578-2f8a64760167",
+      "name": "Search files and folders",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KkVid8eov8I9rYar",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "13HXpcEBF97IWeo-Z3auo9rNS5W2QRkZLlOhXYSlavg8",
+          "mode": "list",
+          "cachedResultName": "สร้างข้แมูลที่มียอดขายต่ำกว่าปกติปนอยู่ด้วย",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13HXpcEBF97IWeo-Z3auo9rNS5W2QRkZLlOhXYSlavg8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1239603926,
+          "mode": "list",
+          "cachedResultName": "สร้างข้แมูลที่มียอดขายต่ำกว่าปกติปนอยู่ด้วย",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/13HXpcEBF97IWeo-Z3auo9rNS5W2QRkZLlOhXYSlavg8/edit#gid=1239603926"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "วันที่",
+              "displayName": "วันที่",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "สินค้า",
+              "displayName": "สินค้า",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "หมวดหมู่สินค้า",
+              "displayName": "หมวดหมู่สินค้า",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ยอดขาย (฿)",
+              "displayName": "ยอดขาย (฿)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ต้นทุนสินค้า (COG) (฿)",
+              "displayName": "ต้นทุนสินค้า (COG) (฿)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ค่าใช้จ่ายดำเนินงาน (OPEX) (฿)",
+              "displayName": "ค่าใช้จ่ายดำเนินงาน (OPEX) (฿)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ค่าใช้จ่ายรวม (฿)",
+              "displayName": "ค่าใช้จ่ายรวม (฿)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ผลลัพธ์รวม (กำไร/ขาดทุน) (฿)",
+              "displayName": "ผลลัพธ์รวม (กำไร/ขาดทุน) (฿)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "สูตรที่ใช้ (Excel)",
+              "displayName": "สูตรที่ใช้ (Excel)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        464,
+        0
+      ],
+      "id": "b0f163f9-852e-4e22-b641-30d0b129b84b",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. **แก้ไขบรรทัดนี้:** ใช้ $input.all() เพื่อดึง Array ของ Input Item ทั้งหมด\n// แล้วใช้ .map(item => item.json) เพื่อดึงเอาเฉพาะข้อมูล JSON (ข้อมูลแถว)\nconst salesData = $input.all().map(item => item.json); \n\nlet totalSales = 0;\nlet lowSalesDates = [];\n\n// 2. คำนวณยอดขายรวม\nfor (const item of salesData) {\n  // **สำคัญ:** ใช้ชื่อคอลัมน์จริงจาก Input: 'ยอดขาย (B)'\n  const sales = parseFloat(item['ยอดขาย (B)']); \n  if (!isNaN(sales)) {\n    totalSales += sales; \n  }\n}\n\n// 3. คำนวณและตรวจจับ Outlier\nconst averageSales = totalSales / salesData.length;\n// เกณฑ์: ต่ำกว่าค่าเฉลี่ย 20%\nconst threshold = averageSales * 0.8; \nlet lowSalesDetected = false;\n\nfor (const item of salesData) {\n  const currentSales = parseFloat(item['ยอดขาย (B)']);\n  // **สำคัญ:** ใช้คอลัมน์ 'รหัสพนักงาน (A)' เป็นตัวระบุรายการแทนวันที่\n  const dateIdentifier = item['รหัสพนักงาน (A)']; \n  \n  if (currentSales < threshold) {\n    lowSalesDetected = true;\n    lowSalesDates.push(`รหัสพนักงาน ${dateIdentifier} ยอดขาย ${currentSales.toFixed(2)} บาท`);\n  }\n}\n\n// 4. เตรียมข้อความสรุปสำหรับ AI Agent และ If Node\nlet summaryText;\n\nif (lowSalesDetected) {\n  summaryText = `จากการวิเคราะห์ยอดขาย ${salesData.length} รายการ พบว่ามียอดขายรวม ${totalSales.toFixed(2)} บาท, ค่าเฉลี่ยต่อรายการอยู่ที่ ${averageSales.toFixed(2)} บาท มีรายงานยอดขายต่ำกว่าเกณฑ์ (${(100 - 80)}%) ในรายการต่อไปนี้: ${lowSalesDates.join('; ')}`;\n} else {\n  summaryText = `ยอดขายรวม ${totalSales.toFixed(2)} บาท ยอดขายเฉลี่ยต่อรายการ ${averageSales.toFixed(2)} บาท. ไม่พบยอดขายต่ำกว่าเกณฑ์ในช่วงเวลานี้`;\n}\n\n\n// 5. ส่ง Output ออกไปให้ AI Agent และ If Node\nreturn [\n  {\n    json: {\n      reportSummary: summaryText, \n      lowSalesDetected: lowSalesDetected \n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        832,
+        0
+      ],
+      "id": "e2988359-aab2-4c2e-aee0-03a977b865dd",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915648@msu.ac.th",
+        "subject": "={{ $json.name }}",
+        "message": "={{ $('Code in JavaScript').item.json.reportSummary }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1760,
+        0
+      ],
+      "id": "35913093-73d7-47f3-82f9-155fbb94f1a7",
+      "name": "Send a message",
+      "webhookId": "25008bfb-b991-415b-af9f-659d8a9ddb77",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "PSVaVEb9F1M93lLS",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "734d93c3-c24b-4061-9860-19eec1d45505",
+              "leftValue": "",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1408,
+        192
+      ],
+      "id": "bb48adae-247b-4972-a4d3-ef996d2379d1",
+      "name": "If",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $node[\"Code in JavaScript\"].json.reportSummary }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        928,
+        288
+      ],
+      "id": "c86e3b21-a1c3-4857-bcb4-f9ff56de9abe",
+      "name": "AI Agent",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        976,
+        480
+      ],
+      "id": "6b71fe96-4b9d-4e56-a4b9-1d528604c25f",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "fVvqV0PNz3kfOTFT",
+          "name": "n8n free OpenAI API credits"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "=",
+        "limit": 1,
+        "filter": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1248,
+        0
+      ],
+      "id": "bb189313-3178-477d-83a6-3c14dadb9065",
+      "name": "Search files and folders1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "KkVid8eov8I9rYar",
+          "name": "Google Drive account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Search files and folders",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search files and folders": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Search files and folders1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        []
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search files and folders1": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b3ebe10b-28d1-4000-9c50-306bc4f1c05c",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8fcdb60bf1e67827b6536520d417584d66a0de81de5dc0e899259d207868489e"
+  },
+  "id": "8bjNzK5gZCNq1iev",
+  "tags": []
+}
