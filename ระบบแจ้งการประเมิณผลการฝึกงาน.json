@@ -1,0 +1,798 @@
+{
+  "name": "ระบบแจ้งการประเมิณผลการฝึกงาน",
+  "nodes": [
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['คะแนนรวม'] }}",
+                    "rightValue": 70,
+                    "operator": {
+                      "type": "number",
+                      "operation": "lte"
+                    },
+                    "id": "8e703ddb-0519-4025-807d-3a7d32d70282"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "964d5f33-49f5-4562-86e6-f6d922a54bde",
+                    "leftValue": "={{ $json['คะแนนรวม'] }}",
+                    "rightValue": 84,
+                    "operator": {
+                      "type": "number",
+                      "operation": "lte"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "fd9c7438-0c48-4166-a4fd-7224f7d0525d",
+                    "leftValue": "={{ $json['คะแนนรวม'] }}",
+                    "rightValue": 85,
+                    "operator": {
+                      "type": "number",
+                      "operation": "gte"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        -320,
+        416
+      ],
+      "id": "e2c4d5cf-a274-4e48-bc81-3b1b0e86f227",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY",
+          "mode": "list",
+          "cachedResultName": "ทดลอง",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 374598828,
+          "mode": "list",
+          "cachedResultName": "ผ่านระดับ C",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit#gid=374598828"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        144
+      ],
+      "id": "061874dd-a860-4290-9adb-ee3fba1ab06a",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY",
+          "mode": "list",
+          "cachedResultName": "ทดลอง",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2011624825,
+          "mode": "list",
+          "cachedResultName": "ผ่านระดับ B",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit#gid=2011624825"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        272,
+        432
+      ],
+      "id": "8e7b1d2f-e2a5-4cef-b055-8e738dc1a401",
+      "name": "Append row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY",
+          "mode": "list",
+          "cachedResultName": "ทดลอง",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1527980730,
+          "mode": "list",
+          "cachedResultName": "ผ่านระดับ A",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit#gid=1527980730"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        272,
+        736
+      ],
+      "id": "e86038df-0506-4584-96cd-ec73c01654b0",
+      "name": "Append row in sheet2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## ผ่าน ผลการประเมิน ควรปรับปรุง\n",
+        "height": 208,
+        "width": 544,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        32,
+        96
+      ],
+      "typeVersion": 1,
+      "id": "32bb5e29-31f5-46c3-97e3-5b3ab2248cbd",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## ผ่าน ผลการประเมิน ปานกลาง\n\n",
+        "height": 208,
+        "width": 544,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        32,
+        384
+      ],
+      "typeVersion": 1,
+      "id": "a902f250-943a-44b4-9c51-6878e3edc699",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## ผ่าน ผลการประเมิน ดีมาก\n\n",
+        "height": 208,
+        "width": 544,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        32,
+        672
+      ],
+      "typeVersion": 1,
+      "id": "376c8fb4-45a0-4a12-8105-1ec72e121f88",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## ไม่ผ่านการประเมิน\n\n",
+        "height": 224,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -208,
+        976
+      ],
+      "typeVersion": 1,
+      "id": "eb569828-1a4f-4ff2-a3c4-7d720aea93e4",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "## ตรวจสอบผลการประเมินคะแนนการฝึกงาน\n",
+        "height": 256,
+        "width": 512,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1440,
+        624
+      ],
+      "typeVersion": 1,
+      "id": "649c2ba8-b611-421d-8e71-abdda5360036",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "content": "## ตรวจสอบและพิจารณา\n",
+        "height": 256,
+        "width": 432,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -880,
+        624
+      ],
+      "typeVersion": 1,
+      "id": "399ccd83-6ba8-4c18-8214-95e48d9f9612",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "ชีต1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1LXqxzCIpd2EnluhausN-KSdecTlo9VyXLdAbgPv42mY/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1312,
+        688
+      ],
+      "id": "064193b9-9511-41c7-9a42-ead175ea41f7",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "6qKzMqeBVxHFPZAG",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['ผลการประเมิน'] }}",
+                    "rightValue": "ผ่าน",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "e6dd29ff-1c4c-4803-a385-e0c4d7ef2479"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3598f0ea-69b4-4f66-9baa-82eecfe5fce9",
+                    "leftValue": "={{ $json['ผลการประเมิน'] }}",
+                    "rightValue": "ไม่ผ่าน",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        -720,
+        688
+      ],
+      "id": "9b3132e8-e651-4016-849b-d1a7fdc45cfb",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "content": "## รวมข้อมูลและส่งออกข้อมูลเป็น 1 ไฟล์\n\n",
+        "height": 224,
+        "width": 432,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        608,
+        80
+      ],
+      "typeVersion": 1,
+      "id": "531ac2fa-00af-4057-bda4-cba6c2df186f",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "jsCode": "// รวมข้อมูลจากทุกแถวใน workflow เดิม (เฉพาะชื่อ)\nconst combinedList = items.map((item, index) => {\n  const data = item.json;\n  return `${index + 1}. ${data[\"ชื่อผู้ฝึกงาน\"]}`;\n});\n\n// คืนค่าเป็น item เดียว\nreturn [{\n  json: {\n    message: `สรุปรายชื่อผู้ฝึกงานทั้งหมด:\\n\\n${combinedList.join(\"\\n\")}`\n  }\n}];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        768,
+        144
+      ],
+      "id": "4ea3977b-7b29-4e8d-bffc-1ae81175c892",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "content": "## ส่งข้อความผ่านอีเมล ว่าผ่าน\n\n",
+        "height": 224,
+        "width": 336,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1072,
+        80
+      ],
+      "typeVersion": 1,
+      "id": "df663a1a-b1fa-409e-aef7-2c95f0a9c093",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915639@msu.ac.th",
+        "subject": "แจ้งผลการประเมินการฝึกงาน",
+        "emailType": "text",
+        "message": "=รายชื่อผู้ \"ผ่าน\" การประเมิน โดยมีะแนนการประเมินอยู่ในระดับ ควรปรับปรุง \n\n\n{{ $json.message }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1184,
+        144
+      ],
+      "id": "0f468a3d-d078-44a6-abee-45875205971e",
+      "name": "Send a message",
+      "webhookId": "fe4347eb-e60c-4b1c-811b-fc3e7d6459e5",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "TliHqVuvbYDleuzL",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// รวมข้อมูลจากทุกแถวใน workflow เดิม (เฉพาะชื่อ)\nconst combinedList = items.map((item, index) => {\n  const data = item.json;\n  return `${index + 1}. ${data[\"ชื่อผู้ฝึกงาน\"]}`;\n});\n\n// คืนค่าเป็น item เดียว\nreturn [{\n  json: {\n    message: `สรุปรายชื่อผู้ฝึกงานทั้งหมด:\\n\\n${combinedList.join(\"\\n\")}`\n  }\n}];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        784,
+        432
+      ],
+      "id": "d9adae95-2123-4541-ae82-730570a56d42",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915639@msu.ac.th",
+        "subject": "แจ้งผลการประเมินการฝึกงาน",
+        "emailType": "text",
+        "message": "=รายชื่อผู้ \"ผ่าน\" การประเมิน โดยมีะแนนการประเมินอยู่ในระดับ ปานกลาง\n\n\n{{ $json.message }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1184,
+        432
+      ],
+      "id": "705cd8e7-2c70-42d2-904e-ccfe74c1a160",
+      "name": "Send a message1",
+      "webhookId": "fe4347eb-e60c-4b1c-811b-fc3e7d6459e5",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "TliHqVuvbYDleuzL",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// รวมข้อมูลจากทุกแถวใน workflow เดิม (เฉพาะชื่อ)\nconst combinedList = items.map((item, index) => {\n  const data = item.json;\n  return `${index + 1}. ${data[\"ชื่อผู้ฝึกงาน\"]}`;\n});\n\n// คืนค่าเป็น item เดียว\nreturn [{\n  json: {\n    message: `สรุปรายชื่อผู้ฝึกงานทั้งหมด:\\n\\n${combinedList.join(\"\\n\")}`\n  }\n}];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        784,
+        736
+      ],
+      "id": "5039feeb-7fd8-47e4-88ef-b892e51c7dcb",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915639@msu.ac.th",
+        "subject": "แจ้งผลการประเมินการฝึกงาน",
+        "emailType": "text",
+        "message": "=รายชื่อผู้ \"ผ่าน\" การประเมิน โดยมีะแนนการประเมินอยู่ในระดับ ดีมาก\n\n\n{{ $json.message }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1184,
+        736
+      ],
+      "id": "2defcfd9-886d-4f0a-9f22-c39fb6afd613",
+      "name": "Send a message3",
+      "webhookId": "fe4347eb-e60c-4b1c-811b-fc3e7d6459e5",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "TliHqVuvbYDleuzL",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## รวมข้อมูลและส่งออกข้อมูลเป็น 1 ไฟล์\n\n",
+        "height": 224,
+        "width": 432,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        608,
+        384
+      ],
+      "typeVersion": 1,
+      "id": "b22a30e3-84ec-4336-b852-f3c31d06b8cc",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "content": "## ส่งข้อความผ่านอีเมล ว่าผ่าน\n\n",
+        "height": 224,
+        "width": 336,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1072,
+        384
+      ],
+      "typeVersion": 1,
+      "id": "6b72488e-a7d2-4d82-8ef3-27d610b0beab",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "## รวมข้อมูลและส่งออกข้อมูลเป็น 1 ไฟล์\n\n",
+        "height": 224,
+        "width": 432,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        608,
+        672
+      ],
+      "typeVersion": 1,
+      "id": "cab3f5e0-c48b-4131-af14-d4626c15ddbe",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "content": "## ส่งข้อความผ่านอีเมล ว่าผ่าน\n\n",
+        "height": 224,
+        "width": 336,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1072,
+        672
+      ],
+      "typeVersion": 1,
+      "id": "20b77934-6599-4ca1-bcfb-ca76346b6f28",
+      "name": "Sticky Note11"
+    },
+    {
+      "parameters": {
+        "jsCode": "// รวมข้อมูลจากทุกแถวใน workflow เดิม (เฉพาะชื่อ)\nconst combinedList = items.map((item, index) => {\n  const data = item.json;\n  return `${index + 1}. ${data[\"ชื่อผู้ฝึกงาน\"]}`;\n});\n\n// คืนค่าเป็น item เดียว\nreturn [{\n  json: {\n    message: `สรุปรายชื่อผู้ฝึกงานทั้งหมด:\\n\\n${combinedList.join(\"\\n\")}`\n  }\n}];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -480,
+        1040
+      ],
+      "id": "617f0d28-d771-42e1-a889-567b1548c179",
+      "name": "Code in JavaScript3"
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915639@msu.ac.th",
+        "subject": "แจ้งผลการประเมินการฝึกงาน",
+        "emailType": "text",
+        "message": "=รายชื่อผู้ \"ไม่ผ่าน\" การประเมินการฝึกงาน\n\n\n{{ $json.message }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -144,
+        1040
+      ],
+      "id": "8e3c2fbd-552e-4cd1-888c-5549366d3179",
+      "name": "Send a message4",
+      "webhookId": "fe4347eb-e60c-4b1c-811b-fc3e7d6459e5",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "TliHqVuvbYDleuzL",
+          "name": "Gmail account 3"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append row in sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code in JavaScript3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "Send a message3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript3": {
+      "main": [
+        [
+          {
+            "node": "Send a message4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "cf220090-39e1-4575-acad-8f36e8ffd19d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8fcdb60bf1e67827b6536520d417584d66a0de81de5dc0e899259d207868489e"
+  },
+  "id": "WvxKvVHFrFPGNlDg",
+  "tags": []
+}
