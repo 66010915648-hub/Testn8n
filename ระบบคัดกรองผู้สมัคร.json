@@ -1,0 +1,879 @@
+{
+  "name": "ระบบคัดกรองผู้สมัคร",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "# เงื่อนไขในการพิจารณา\n\n\n\n\n\n\n\n\n\n",
+        "height": 608,
+        "width": 1696,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1200,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "5950214f-7ad0-452d-af4a-82a51a209153",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "## ผ่านการคัดกรองเข้าสัมภาษณ์\n\n",
+        "height": 224,
+        "width": 464,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        592,
+        -48
+      ],
+      "typeVersion": 1,
+      "id": "f47f6636-bedd-4500-ba26-dab9273bd9ef",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## รวมข้อมูลและส่งออกข้อมูลเป็น 1 ไฟล์\n\n",
+        "height": 224,
+        "width": 464,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        592,
+        288
+      ],
+      "typeVersion": 1,
+      "id": "c0c41b83-0109-40ca-9ccc-d75c45451384",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A",
+          "mode": "list",
+          "cachedResultName": "ข้อมูลผู้สมัครงานตำแหน่ง A",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "รายชื่อผู้สมัคร",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "ชื่อผู้สมัคร",
+              "displayName": "ชื่อผู้สมัคร",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "อายุ",
+              "displayName": "อายุ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "เพศ",
+              "displayName": "เพศ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "สถานภาพ",
+              "displayName": "สถานภาพ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "สัญชาติ",
+              "displayName": "สัญชาติ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "จังหวัดที่อยู่",
+              "displayName": "จังหวัดที่อยู่",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "มหาวิทยาลัยที่จบ",
+              "displayName": "มหาวิทยาลัยที่จบ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "สาขาที่จบ",
+              "displayName": "สาขาที่จบ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ระดับการศึกษา",
+              "displayName": "ระดับการศึกษา",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ผลการศึกษา GPAX",
+              "displayName": "ผลการศึกษา GPAX",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ประสบการณ์ทำงาน(ปี)",
+              "displayName": "ประสบการณ์ทำงาน(ปี)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Certificate",
+              "displayName": "Certificate",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Soft Skills",
+              "displayName": "Soft Skills",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ช่องทางการติดต่อ",
+              "displayName": "ช่องทางการติดต่อ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1840,
+        352
+      ],
+      "id": "a8205e8a-b11e-4511-9ece-82df8a7364ee",
+      "name": "Append row in sheet3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## รับไฟล์และดาวน์โหลดไฟล์\n",
+        "height": 256,
+        "width": 400,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2496,
+        272
+      ],
+      "typeVersion": 1,
+      "id": "a6590e16-6564-4121-b29d-32aa657ee888",
+      "name": "Sticky Note12"
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message",
+          "*"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2480,
+        352
+      ],
+      "id": "1990c1f4-1abb-43c9-b1d7-3a5611798566",
+      "name": "Telegram Trigger",
+      "webhookId": "41f119c1-519f-466c-9707-2e5922321e69",
+      "credentials": {
+        "telegramApi": {
+          "id": "zgfUivt6HGyD3dWg",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.document.file_id }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -2256,
+        352
+      ],
+      "id": "c1d12adf-5168-45b7-9b98-927cd8ca005a",
+      "name": "Get a file",
+      "webhookId": "6b5462fd-dc51-43c6-ab76-e5bc708e5808",
+      "credentials": {
+        "telegramApi": {
+          "id": "zgfUivt6HGyD3dWg",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A",
+          "mode": "list",
+          "cachedResultName": "ข้อมูลผู้สมัครงานตำแหน่ง A",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 10121556,
+          "mode": "list",
+          "cachedResultName": "รายชื่อผู้ไม่ผ่าน",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit#gid=10121556"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -288,
+        704
+      ],
+      "id": "1a9fbee0-18dc-4fb3-ac76-8e5ef56f2d49",
+      "name": "Append row in sheet4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -704,
+        704
+      ],
+      "id": "3ddf6ad2-6a0f-48e9-8b67-66c18500964e",
+      "name": "Code in JavaScript4"
+    },
+    {
+      "parameters": {
+        "operation": "xlsx",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -1504,
+        352
+      ],
+      "id": "480e753b-cb17-4bc5-a728-f8e25f20e29d",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['ผลการศึกษา GPAX'] }}",
+                    "rightValue": 3,
+                    "operator": {
+                      "type": "number",
+                      "operation": "gte"
+                    },
+                    "id": "8c594f9d-33e4-42ca-81a4-cbdf78f64e32"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "6f18718d-42a3-43cf-9608-2877bb83ae29",
+                    "leftValue": "={{ $json['ผลการศึกษา GPAX'] }}",
+                    "rightValue": 3,
+                    "operator": {
+                      "type": "number",
+                      "operation": "lt"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        -1104,
+        352
+      ],
+      "id": "1fb516a0-755c-47af-ac66-7db2d77e4fc9",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['ประสบการณ์ทำงาน(ปี)'] }}",
+                    "rightValue": 5,
+                    "operator": {
+                      "type": "number",
+                      "operation": "gte"
+                    },
+                    "id": "8c594f9d-33e4-42ca-81a4-cbdf78f64e32"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "6f18718d-42a3-43cf-9608-2877bb83ae29",
+                    "leftValue": "={{ $json['ประสบการณ์ทำงาน(ปี)'] }}",
+                    "rightValue": 5,
+                    "operator": {
+                      "type": "number",
+                      "operation": "lt"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        -688,
+        336
+      ],
+      "id": "d5a469b2-218b-4ad9-aca2-400f29ed3a79",
+      "name": "Switch2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8d855141-cb54-4500-8f20-a1605ddafde2",
+              "leftValue": "={{ $json.TOEIC }}",
+              "rightValue": 600,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            },
+            {
+              "id": "a8cda9c9-7212-4661-af61-df4524f3f2e9",
+              "leftValue": "={{ $json.IELTS }}",
+              "rightValue": 6,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -368,
+        32
+      ],
+      "id": "b32b1f4a-05ae-4175-80d1-2ec42b4662ba",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A",
+          "mode": "list",
+          "cachedResultName": "ข้อมูลผู้สมัครงานตำแหน่ง A",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 808405417,
+          "mode": "list",
+          "cachedResultName": "รายชื่อผู้ที่ถูกเรียกสัมภาษณ์",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit#gid=808405417"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        0,
+        16
+      ],
+      "id": "31fc895d-d1f7-44ab-a18a-6846b641a3ae",
+      "name": "Append row in sheet5",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915639@msu.ac.th",
+        "subject": "แจ้งผลการคัดกรองผู้มาสมัครงานตำแหน่ง A",
+        "emailType": "text",
+        "message": "=\n{{ $json.message }}\n\n\nสอบถามข้อมูลเพิ่มเติมได้ที่ฝ่าย IT\nอีเมล:Dreadswe2k@gmail.com",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        704,
+        16
+      ],
+      "id": "8b98404a-2b00-4197-b230-9c2e1cc58c55",
+      "name": "Send a message2",
+      "webhookId": "fe4347eb-e60c-4b1c-811b-fc3e7d6459e5",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "TliHqVuvbYDleuzL",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A",
+          "mode": "list",
+          "cachedResultName": "ข้อมูลผู้สมัครงานตำแหน่ง A",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 998375840,
+          "mode": "list",
+          "cachedResultName": "รายชื่อผู้รอพิจารณา",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit#gid=998375840"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        0,
+        352
+      ],
+      "id": "071c0520-617e-4d4d-8a51-aedbf4821fa6",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "1oRBQKMSsrlxfhGz",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// รวมข้อมูลจากทุกแถวใน workflow เดิม (เฉพาะชื่อ)\nconst combinedList = items.map((item, index) => {\n  const data = item.json;\n  return `ลำดับที่ ${data[\"ลำดับ\"]} ${data[\"ชื่อผู้สมัคร\"]}`;\n});\n\n// คืนค่าเป็น item เดียว\nreturn [{\n  json: {\n    message: `สรุปรายชื่อผู้ที่ผ่านพิจารณาเพื่อถูกเรียกสัมภาษณ์จากผู้สมัครงานทั้งหมด:\\n\\n${combinedList.join(\"\\n\")}`\n  }\n}];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        272,
+        16
+      ],
+      "id": "63e8b291-441e-4488-958a-86ea9a48bc62",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "jsCode": "// รวมข้อมูลจากทุกแถวใน workflow เดิม (เฉพาะชื่อ)\nconst combinedList = items.map((item, index) => {\n  const data = item.json;\n  return `ลำดับที่ ${data[\"ลำดับ\"]} ${data[\"ชื่อผู้สมัคร\"]}`;\n});\n\n// คืนค่าเป็น item เดียว\nreturn [{\n  json: {\n    message: `สรุปรายชื่อผู้ที่รอการพิจารณาเพื่อถูกเรียกสัมภาษณ์เพิ่มเติมจากผู้สมัครงานทั้งหมด:\\n\\n${combinedList.join(\"\\n\")}`\n  }\n}];\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        272,
+        352
+      ],
+      "id": "9243d062-e70e-4c16-b44d-476bd6689284",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "sendTo": "66010915639@msu.ac.th",
+        "subject": "แจ้งผลเรื่องการตรวจสอบข้อมูลผู้สมัครงานที่รอการพิจารณาเพิ่มเติม",
+        "emailType": "text",
+        "message": "=เรียนฝ่ายบุคคล \nท่านสามารถตรวจสอบข้อมูลผู้ที่รอการพิจารณาเพื่อถูกเรียกสัมภาษณ์เพิ่มเติม  \nรวมถึงข้อมูลผู้สมัครทั้งหมด ได้จากลิ้งด้านล่างนี้ \n\nhttps://docs.google.com/spreadsheets/d/1KbecnslyoazMC65DR-jo6SpU9tFIz6TCoTMJyjf538A/edit?usp=sharing\n\n\n\nสอบถามข้อมูลเพิ่มเติมได้ที่ฝ่าย IT\nอีเมล:Dreadswe2k@gmail.com",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        688,
+        352
+      ],
+      "id": "67771250-a615-4d9f-941b-12ce5c5ce889",
+      "name": "Send a message",
+      "webhookId": "fe4347eb-e60c-4b1c-811b-fc3e7d6459e5",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "TliHqVuvbYDleuzL",
+          "name": "Gmail account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## อัพเดตข้อมูลที่ได้รับแล้วทำการแปลงข้อมูล\n",
+        "height": 288,
+        "width": 832,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2048,
+        256
+      ],
+      "typeVersion": 1,
+      "id": "9a7dcce8-4508-4f39-aae8-e319cf1727af",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## อัพเดตข้อมูลผู้ที่ไม่ผ่านการคัดกรอง",
+        "height": 288,
+        "width": 704,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -768,
+        576
+      ],
+      "typeVersion": 1,
+      "id": "fbc378bc-49ca-4950-a635-8b1ca0e4f885",
+      "name": "Sticky Note1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Append row in sheet3": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get a file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet4": {
+      "main": [
+        []
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code in JavaScript4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript4": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch2": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet5": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a message2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ba3b30b6-0578-47bb-88d5-c0568c85bc1f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8fcdb60bf1e67827b6536520d417584d66a0de81de5dc0e899259d207868489e"
+  },
+  "id": "4Nf0YIXySjoFfKmL",
+  "tags": []
+}
